@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign-up for Weeklies</title>
+    <title>Sign-Up for Weeklies</title>
 
     <!-- Specify the website favicon -->
     <link rel="icon" type="image/png" href="prod.dxterner%20pfp.png">
@@ -22,24 +22,22 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: black; /* Set the background color to black */
-            color: white; /* Set the text color to white */
+            background: url('prod.dxterner pfp.png') center/cover no-repeat fixed; /* Set the background image */
             font-family: Arial, sans-serif; /* Choose a suitable font */
         }
 
         /* Style the MailerLite overlay */
         .ml-embedded {
             position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(0, 0, 0, 0.8); /* Set the overlay background color */
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 400px; /* Adjust the maximum width as needed */
+            top: 0;
+            left: 0;
             width: 100%;
-            text-align: center;
-            box-sizing: border-box;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8); /* Set the overlay background color */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999; /* Ensure the overlay is on top of other elements */
         }
 
         /* Style the close button on the overlay */
@@ -53,8 +51,6 @@
     </style>
 </head>
 <body>
-
-<!-- Your website content goes here -->
 
 <!-- MailerLite Embedded Form -->
 <div class="ml-embedded" data-form="7NTbMG">
