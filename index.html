@@ -91,27 +91,47 @@
             var loadingText = document.getElementById('loading-text');
             var cursor = document.getElementById('cursor');
             var consoleLog = document.getElementById('console-log');
+            var loadingComplete = false;
 
-            // Simulate console logs
+            // Simulate console logs with a typing effect
             var logs = [
                 'Initiating website...',
                 'Loading assets...',
                 'Establishing connection...',
+                'Processing data...',
+                'Compiling code...',
                 'Ready!'
             ];
 
-            logs.forEach(function(log, index) {
-                setTimeout(function() {
-                    consoleLog.innerHTML += '<div>' + log + '</div>';
+            var currentLog = 0;
+            var currentChar = 0;
+
+            function typeNextChar() {
+                if (currentLog < logs.length) {
+                    var currentLine = logs[currentLog];
+                    if (currentChar <= currentLine.length) {
+                        consoleLog.innerHTML = currentLine.substring(0, currentChar);
+                        currentChar++;
+                    } else {
+                        currentLog++;
+                        currentChar = 0;
+                        setTimeout(typeNextChar, 500); // Wait before typing the next line
+                    }
                     consoleLog.scrollTop = consoleLog.scrollHeight;
-                }, 1500 * index);
-            });
+                    setTimeout(typeNextChar, 50); // Typing speed
+                } else {
+                    // All logs typed, mark loading as complete
+                    loadingComplete = true;
+                }
+            }
+
+            typeNextChar();
 
             // Simulate loading with a setTimeout
             setTimeout(function() {
                 loadingScreen.style.display = 'none';
                 // Add your code to reveal the main content or load additional resources here
-            }, 1500 * logs.length); // Adjust the duration as needed
+            }, 500 * (logs.length + 1)); // Adjust the duration as needed
         });
     </script>
 </head>
