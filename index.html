@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-Up For Weeklies</title>
 
-  
-    <link rel="icon" type="image/png" href="prod.dxterner%20pfp.png">
-
     <!-- MailerLite Universal -->
     <script>
         (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
@@ -17,10 +14,71 @@
         ml('account', '408074');
     </script>
     <!-- End MailerLite Universal -->
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #000;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+        }
+
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+        #loading-text {
+            font-size: 24px;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        #cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background: #00ff00;
+            animation: blink 1s infinite;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var loadingScreen = document.getElementById('loading-screen');
+            var loadingText = document.getElementById('loading-text');
+            var cursor = document.getElementById('cursor');
+
+            // Simulate loading with a setTimeout
+            setTimeout(function() {
+                loadingScreen.style.display = 'none';
+                // Add your code to reveal the main content or load additional resources here
+            }, 3000); // Adjust the duration as needed
+        });
+    </script>
 </head>
 <body>
 
+<!-- Your website content goes here -->
 
+<!-- Loading Screen -->
+<div id="loading-screen">
+    <div id="loading-text">Loading<span id="cursor">_</span></div>
+</div>
 
 <!-- MailerLite Embedded Form -->
 <div class="ml-embedded" data-form="7NTbMG"></div>
