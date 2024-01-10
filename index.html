@@ -17,10 +17,6 @@
 </head>
 <body>
 
-<div id="loading-screen">
-    <div id="loading-text">Loading<span class="matrix-code"> Weeklies</span><span id="cursor">_</span></div>
-</div>
-
 <div id="console-log"></div>
 
 <div class="ml-embedded" data-form="7NTbMG"></div>
@@ -33,26 +29,6 @@
         background: #000 url('background-image.jpg') fixed;
         color: #00ff00;
         font-family: 'Courier New', monospace;
-    }
-
-    #loading-screen {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 9999;
-    }
-
-    #loading-text {
-        font-size: 24px;
-        display: flex;
-        align-items: center;
-        position: absolute;
     }
 
     #console-log {
@@ -95,12 +71,7 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        var loadingScreen = document.getElementById('loading-screen');
-        var loadingText = document.getElementById('loading-text');
-        var cursor = document.getElementById('cursor');
         var consoleLog = document.getElementById('console-log');
-        var loadingComplete = false;
-
         var logs = [
             'Initiating website...',
             'Loading assets...',
@@ -126,16 +97,10 @@
                 }
                 consoleLog.scrollTop = consoleLog.scrollHeight;
                 setTimeout(typeNextChar, 50);
-            } else {
-                loadingComplete = true;
             }
         }
 
         typeNextChar();
-
-        setTimeout(function() {
-            loadingScreen.style.display = 'none';
-        }, 500 * (logs.length + 1));
     });
 </script>
 
