@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-Up For Weeklies</title>
 
-    <!-- Specify the website favicon -->
     <link rel="icon" type="image/png" href="prod.dxterner%20pfp.png">
 
-    <!-- MailerLite Universal -->
     <script>
         (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
         .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
@@ -16,140 +14,130 @@
         (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
         ml('account', '408074');
     </script>
-    <!-- End MailerLite Universal -->
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background: #000 url('background-image.jpg') fixed;
-            color: #00ff00;
-            font-family: 'Courier New', monospace;
-        }
-
-        #loading-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-        }
-
-        #loading-text {
-            font-size: 24px;
-            display: flex;
-            align-items: center;
-            position: absolute; /* Keep the position absolute */
-        }
-
-        #console-log {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            font-size: 14px;
-            max-width: 80%;
-            overflow: hidden;
-        }
-
-        @keyframes matrix {
-            0% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: translateY(100%);
-            }
-        }
-
-        .matrix-code {
-            display: inline-block;
-            animation: matrix 2s linear infinite;
-        }
-
-        #cursor {
-            display: inline-block;
-            width: 10px;
-            height: 20px;
-            background: #00ff00;
-            animation: blink 1s infinite;
-        }
-
-        @keyframes blink {
-            50% {
-                opacity: 0;
-            }
-        }
-    </style>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var loadingScreen = document.getElementById('loading-screen');
-            var loadingText = document.getElementById('loading-text');
-            var cursor = document.getElementById('cursor');
-            var consoleLog = document.getElementById('console-log');
-            var loadingComplete = false;
-
-            // Simulate console logs with a typing effect
-            var logs = [
-                'Initiating website...',
-                'Loading assets...',
-                'Establishing connection...',
-                'Processing data...',
-                'Compiling code...',
-                'Ready!'
-            ];
-
-            var currentLog = 0;
-            var currentChar = 0;
-
-            function typeNextChar() {
-                if (currentLog < logs.length) {
-                    var currentLine = logs[currentLog];
-                    if (currentChar <= currentLine.length) {
-                        consoleLog.innerHTML = currentLine.substring(0, currentChar);
-                        currentChar++;
-                    } else {
-                        currentLog++;
-                        currentChar = 0;
-                        setTimeout(typeNextChar, 500); // Wait before typing the next line
-                    }
-                    consoleLog.scrollTop = consoleLog.scrollHeight;
-                    setTimeout(typeNextChar, 50); // Typing speed
-                } else {
-                    // All logs typed, mark loading as complete
-                    loadingComplete = true;
-                }
-            }
-
-            typeNextChar();
-
-            // Simulate loading with a setTimeout
-            setTimeout(function() {
-                loadingScreen.style.display = 'none';
-                // Add your code to reveal the main content or load additional resources here
-            }, 500 * (logs.length + 1)); // Adjust the duration as needed
-        });
-    </script>
 </head>
 <body>
 
-<!-- Your website content goes here -->
-
-<!-- Loading Screen -->
 <div id="loading-screen">
     <div id="loading-text">Loading<span class="matrix-code"> Weeklies</span><span id="cursor">_</span></div>
 </div>
 
-<!-- Console Log -->
 <div id="console-log"></div>
 
-<!-- MailerLite Embedded Form -->
 <div class="ml-embedded" data-form="7NTbMG"></div>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: #000 url('background-image.jpg') fixed;
+        color: #00ff00;
+        font-family: 'Courier New', monospace;
+    }
+
+    #loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+    }
+
+    #loading-text {
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        position: absolute;
+    }
+
+    #console-log {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        font-size: 14px;
+        max-width: 80%;
+        overflow: hidden;
+    }
+
+    @keyframes matrix {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(100%);
+        }
+    }
+
+    .matrix-code {
+        display: inline-block;
+        animation: matrix 2s linear infinite;
+    }
+
+    #cursor {
+        display: inline-block;
+        width: 10px;
+        height: 20px;
+        background: #00ff00;
+        animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+        50% {
+            opacity: 0;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var loadingScreen = document.getElementById('loading-screen');
+        var loadingText = document.getElementById('loading-text');
+        var cursor = document.getElementById('cursor');
+        var consoleLog = document.getElementById('console-log');
+        var loadingComplete = false;
+
+        var logs = [
+            'Initiating website...',
+            'Loading assets...',
+            'Establishing connection...',
+            'Processing data...',
+            'Compiling code...',
+            'Ready!'
+        ];
+
+        var currentLog = 0;
+        var currentChar = 0;
+
+        function typeNextChar() {
+            if (currentLog < logs.length) {
+                var currentLine = logs[currentLog];
+                if (currentChar <= currentLine.length) {
+                    consoleLog.innerHTML = currentLine.substring(0, currentChar);
+                    currentChar++;
+                } else {
+                    currentLog++;
+                    currentChar = 0;
+                    setTimeout(typeNextChar, 500);
+                }
+                consoleLog.scrollTop = consoleLog.scrollHeight;
+                setTimeout(typeNextChar, 50);
+            } else {
+                loadingComplete = true;
+            }
+        }
+
+        typeNextChar();
+
+        setTimeout(function() {
+            loadingScreen.style.display = 'none';
+        }, 500 * (logs.length + 1));
+    });
+</script>
 
 </body>
 </html>
