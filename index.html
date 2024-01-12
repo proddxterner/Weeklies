@@ -20,7 +20,7 @@
 <nav>
     <ul>
         <li><a href="#about">About Me</a></li>
-        <li><a href="#privacy-policy">Privacy Policy</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li> <!-- Link to the Privacy Policy page -->
     </ul>
 </nav>
 
@@ -31,7 +31,7 @@
 <style>
     body {
         margin: 0;
-        padding: 0;
+        padding: 20px;
         overflow: hidden;
         background: #000 url('background-image.jpg') fixed;
         color: #00ff00;
@@ -68,34 +68,6 @@
         font-size: 14px;
         max-width: 80%;
         overflow: hidden;
-    }
-
-    @keyframes matrix {
-        0% {
-            transform: translateY(0);
-        }
-        100% {
-            transform: translateY(100%);
-        }
-    }
-
-    .matrix-code {
-        display: inline-block;
-        animation: matrix 2s linear infinite;
-    }
-
-    #cursor {
-        display: inline-block;
-        width: 10px;
-        height: 20px;
-        background: #00ff00;
-        animation: blink 1s infinite;
-    }
-
-    @keyframes blink {
-        50% {
-            opacity: 0;
-        }
     }
 </style>
 
