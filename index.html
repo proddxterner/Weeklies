@@ -17,6 +17,13 @@
 </head>
 <body>
 
+<nav>
+    <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#privacy-policy">Privacy Policy</a></li>
+    </ul>
+</nav>
+
 <div id="console-log"></div>
 
 <div class="ml-embedded" data-form="7NTbMG"></div>
@@ -29,6 +36,29 @@
         background: #000 url('background-image.jpg') fixed;
         color: #00ff00;
         font-family: 'Courier New', monospace;
+    }
+
+    nav {
+        background: rgba(0, 0, 0, 0.8);
+        padding: 10px;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    li {
+        margin-right: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #00ff00;
+        font-weight: bold;
+        font-size: 16px;
     }
 
     #console-log {
