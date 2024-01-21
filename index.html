@@ -19,8 +19,9 @@
 
 <nav>
     <ul>
-        <li><a href="https://linktr.ee/proddxterner">About Me</a></li>
-        <li><a href="privacy-policy.html">Privacy Policy</a></li> <!-- Link to the Privacy Policy page -->
+	    <li><button style="border-radius: 30px 0px 0px 30px; border-right: 0px !important; " onclick="location.href = 'https://linktr.ee/proddxterner'">About Me</button></li><!--
+	    --><li><button onclick="location.href = 'https://instagram.com/prod.dxterner'" style="font-size: 30px important!; border-right: 0px !important;">&#xf16d;</button></li><!--
+	    --><li><button style="border-radius: 0px 30px 30px 0px" onclick="location.href = 'privacy-policy.html'" style="text-align: right important;">Privacy Policy</button></li>
     </ul>
 </nav>
 
@@ -37,7 +38,32 @@
         color: #a528F5;
         font-family: 'Courier New', monospace;
     }
-          #mlb2-10843000.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4,
+    button {
+        background-color: #000000 !important;
+        border: 2px solid #a528f5!important;
+        box-shadow: none !important;
+        color: #a528F5 !important;
+        cursor: pointer;
+        font-family: 'Courier New', monospace !important;
+        font-size: 14px ;
+        font-weight: bold !important;
+        line-height: 21px !important;
+        height: auto;
+        padding: 10px 40px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+	transition-duration: 0.7s;
+	cursor: pointer;
+      }
+    button:hover{
+
+	      color: #000000 !important;
+	      background-color: #a528f5 !important;
+
+
+      }
+
+         #mlb2-10843000.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4,
       #mlb2-10843000.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4 {
         color: #a528F5;
         font-family: 'Courier New', monospace;
@@ -59,8 +85,8 @@
       }
       #mlb2-10843000.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button {
         background-color: #000000 !important;
-        border: none !important;
-        border-radius: 4px !important;
+        border: 2px solid #a528f5!important;
+        border-radius: 30px !important;
         box-shadow: none !important;
         color: #a528F5 !important;
         cursor: pointer;
@@ -72,7 +98,18 @@
         padding: 10px !important;
         width: 100% !important;
         box-sizing: border-box !important;
+	transition-duration: 0.7s;
+	cursor: pointer;
       }
+      #mlb2-10843000.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover {
+
+	      color: #000000 !important;
+	      background-color: #a528f5 !important;
+
+
+      }
+
+
             #mlb2-10843000.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsContent.privacy-policy p {
         color: #a528F5;
         font-family: 'Courier New', monospace;
@@ -93,7 +130,7 @@
     }
 
     li {
-        margin-right: 20px;
+	    margin: 0px;
     }
 
     a {
